@@ -25,11 +25,11 @@ namespace Minecraft_Server_Console.Controllers
         [HttpPost]
         public IActionResult Register(AccountViewModel user)
         {
-            // 加密密码  
+            // 加密密码
             user.Password = EncryptPassword(user.Password);
             users.Add(user);
             SaveUsers(users);
-            return RedirectToAction("Signin");
+            return RedirectToAction("Login");
         }
         public IActionResult Login()
         {
