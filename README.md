@@ -24,4 +24,4 @@ If you find a serious security vulnerability that is inconvenient to release pub
 
 The source code follows the [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html) agreement.
 
-Copyright ©2024 FantasyTownDev.
+Copyright ©2024 Liten_PanJun.
