@@ -1,0 +1,37 @@
+﻿@model Minecraft_Server_Console.Models.AccountViewModel;
+
+@{
+    ViewData["Title"] = "登录";
+}
+
+<section class="py-xl bg-cover bg-size--cover" style="background-image: url('../assets/images/backgrounds/img-1.jpg')">
+    <span class="mask bg-primary alpha-6"></span>
+    <div class="container d-flex align-items-center no-padding">
+        <div class="col">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <span class="clearfix"></span>
+                            <h4 class="heading h3 text-white pt-3 pb-5">
+                                欢迎回来,<br>
+                                请登录您的账户
+                            </h4>
+                            <form class="form-primary" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Username" name="Username" placeholder="用户名" _mstplaceholder="136162">
+                                    <kpm-field-badge type="default" loading="false" menu-type="login" class="kpm_input-field-button kpm_gray-key-icon" style="z-index: 3 !important;"></kpm-field-badge>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="Password" name="Password" placeholder="密码" _mstplaceholder="117572">
+                                    <kpm-field-badge type="default" loading="false" menu-type="login" class="kpm_input-field-button kpm_gray-key-icon" style="z-index: 3 !important;"></kpm-field-badge>
+                                </div>
+                                <button type="submit" class="btn btn-block btn-lg bg-white mt-4">登录</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
