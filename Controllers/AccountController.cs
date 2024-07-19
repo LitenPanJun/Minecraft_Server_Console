@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
 using Formatting = Newtonsoft.Json.Formatting;
+using SFile = System.IO.File;
 
 namespace Minecraft_Server_Console.Controllers
 {
@@ -15,7 +16,7 @@ namespace Minecraft_Server_Console.Controllers
         private List<AccountViewModel> users = [];
         public IActionResult Register()
         {
-            if (System.IO.File.Exists("./User.json") != true)
+            if (SFile.Exists("./User.json") != true)
             {
                 return View();
             }
@@ -65,11 +66,11 @@ namespace Minecraft_Server_Console.Controllers
         private void SaveUsers(List<AccountViewModel> users)
         {
             string json = JsonConvert.SerializeObject(users, Formatting.Indented);
-            System.IO.File.WriteAllText("./User.json", json);
+            SFile.WriteAllText("./User.json", json);
         }
         private List<AccountViewModel> GetUsers()
         {
-            var json = System.IO.File.ReadAllText("./User.json");
+            var json = SFile.ReadAllText("./User.json");
             return JsonConvert.DeserializeObject<List<AccountViewModel>>(json) ?? new List<AccountViewModel>();
         }
     }
