@@ -16,7 +16,7 @@ namespace Minecraft_Server_Console.Controllers
         private List<AccountViewModel> users = [];
         public IActionResult Register()
         {
-            if (SFile.Exists("./User.json") != true)
+            if (SFile.Exists("./App_Data/User.json") != true)
             {
                 return View();
             }
@@ -66,11 +66,11 @@ namespace Minecraft_Server_Console.Controllers
         private void SaveUsers(List<AccountViewModel> users)
         {
             string json = JsonConvert.SerializeObject(users, Formatting.Indented);
-            SFile.WriteAllText("./User.json", json);
+            SFile.WriteAllText("./App_Data/User.json", json);
         }
         private List<AccountViewModel> GetUsers()
         {
-            var json = SFile.ReadAllText("./User.json");
+            var json = SFile.ReadAllText("./App_Data/User.json");
             return JsonConvert.DeserializeObject<List<AccountViewModel>>(json) ?? new List<AccountViewModel>();
         }
     }

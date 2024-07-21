@@ -24,4 +24,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Register}/{id?}");
 
+if (!Directory.Exists("./App_Data"))
+{
+    Directory.CreateDirectory("./App_Data/Server");
+}
+
 app.Run();
