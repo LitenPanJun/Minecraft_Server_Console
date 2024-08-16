@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Minecraft服务器控制面板</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    <link href="~/vendor/fontawesome/css/all.css" rel="stylesheet">
+    <!-- Boomerang CSS (including Bootstrap) -->
+    <link type="text/css" href="~/css/theme.css" rel="stylesheet">
+    <!-- Setting Logo -->
+    <!-- link rel="bookmark" type="image/x-icon" href="favicon.ico" -->
+    <!-- link rel="shortcut icon" href="favicon.ico" -->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Panel" asp-action="Index">
+                    MCSC-Minecraft服务器控制面板
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="~/vendor/popper/popper.js"></script>
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/js/bootstrap/bootstrap.js"></script>
+    <!-- FontAwesome 5 -->
+    <script src="~/vendor/fontawesome/js/all.js"></script>
+    <!-- Boomerang JS -->
+    <script src="~/js/theme.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
