@@ -2,6 +2,28 @@
     ViewData["Title"] = "仪表盘";
 }
 
-<div class="text-center">
-    <h1 class="display-4">仪表盘</h1>
+<div class="container">
+    <textarea name="Output" class="form-control" placeholder="等待服务器电波ing..." rows="3" style="height: 75vh; overflow-x:hidden;overflow-y:auto; width: 100%; left: 0px;" resize="none" readonly="readonly"></textarea>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="输入命令，点击按钮即可发送（无需“/”）" aria-label="Recipient's username" aria-describedby="basic-addon2" name="CmdInputText">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" name="SendCmd">发送</button>
+            </div>
+        </div>
+</div>
+<div class="container">
+    <form class="form-primary" method="post">
+        <button type="submit" class="btn btn-success btn-icon-label" name="RunServer">
+            <span class="btn-inner--icon"><i class="fas fa-play"></i></span>
+            <span class="btn-inner--text">启动服务器</span>
+        </button>
+        <button type="submit" class="btn btn-danger btn-icon-label" name="StopServer">
+            <span class="btn-inner--icon"><i class="fas fa-play"></i></span>
+            <span class="btn-inner--text">关闭服务器</span>
+        </button>
+        <button type="submit" class="btn btn-danger btn-icon-label" name="KillServer">
+            <span class="btn-inner--icon"><i class="fas fa-play"></i></span>
+            <span class="btn-inner--text">强制关闭服务器</span>
+        </button>
+    </form>
 </div>
